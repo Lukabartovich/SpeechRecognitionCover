@@ -16,7 +16,3 @@ setup(
         'Programming Language :: Python :: 3.9'
     ]
 )
-
-
-# python setup.py sdist
-# twine upload --skip-existing dist/*
