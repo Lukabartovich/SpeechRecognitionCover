@@ -1,4 +1,5 @@
-from speech_recognition import Microphone, Recognizer, AudioFile, UnknownValueError, RequestError
+from speech_recognition import Microphone, Recognizer, UnknownValueError, RequestError
+import speech_recognition as sr
 
 class Cover:
     def __init__(self, lang='en'):
@@ -117,3 +118,19 @@ class Cover:
                         return ''
                 except RequestError:
                     raise RequestError("can't connect to internet")
+
+    def audio_file(self, path):
+        r = Recognizer()
+        with sr.AudioFile(path) as source:
+            audio = r.record(source)
+
+            try:
+                try:
+                    text = r.recognize_google(audio, language=self.lang)
+                except UnknownValueError:
+                    return ''
+            except RequestError:
+                return ''
+
+        return text
+

@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='SpeechRecognitionCover',
     packages=['SpeechRecognitionCover'],
-    version='1.0.2',
+    version='1.0.3',
     author='Luka',
     author_email='app6onpython@gmail.com',
     description='Easy cover over SpeechRecognition',
