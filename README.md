@@ -9,7 +9,7 @@ This is easy example:
     from SpeechRecognitionCover import Cover
     recognizer = Cover()
     while true:
-        output = recognizer.recognize(noises=True)
+        output = recognizer.recognize()
         print('this is the output' + output)
       
       
