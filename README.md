@@ -10,7 +10,7 @@ This is easy example:
     recognizer = Cover()
     while true:
         output = recognizer.recognize()
-        print('this is the output' + output)
+        print('this is the output: ' + output)
       
       
 
@@ -21,7 +21,7 @@ If you are in a noisy place:
     recognizer = Cover()
     while true:
         output = recognizer.recognize(noises=True)
-        print('this is the output' + output)
+        print('this is the output: ' + output)
       
 And you can use audio files as wel:
 
